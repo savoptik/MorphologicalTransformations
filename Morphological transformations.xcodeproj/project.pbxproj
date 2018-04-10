@@ -138,6 +138,7 @@
 		FE4E522820742C01002009AE /* python3.6 in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E522520742C01002009AE /* python3.6 */; };
 		FE4E522920742C01002009AE /* pkgconfig in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E522620742C01002009AE /* pkgconfig */; };
 		FE4E522A20742C01002009AE /* python2.7 in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E522720742C01002009AE /* python2.7 */; };
+		FE735670207CC4EB0008D044 /* holeRing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE73566E207CC4EB0008D044 /* holeRing.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -204,6 +205,8 @@
 		FE4E522520742C01002009AE /* python3.6 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python3.6; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/python3.6; sourceTree = "<group>"; };
 		FE4E522620742C01002009AE /* pkgconfig */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pkgconfig; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/pkgconfig; sourceTree = "<group>"; };
 		FE4E522720742C01002009AE /* python2.7 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python2.7; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/python2.7; sourceTree = "<group>"; };
+		FE73566E207CC4EB0008D044 /* holeRing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = holeRing.cpp; sourceTree = "<group>"; };
+		FE73566F207CC4EB0008D044 /* holeRing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = holeRing.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				FE4E51432073E8CE002009AE /* main.cpp */,
+				FE73566D207CC4AE0008D044 /* hole_ring */,
 				FE4E51A3207428AE002009AE /* morphologicalTransformations */,
 				FE4E51A22074286B002009AE /* media */,
 			);
@@ -443,6 +447,15 @@
 			path = morphologicalTransformations;
 			sourceTree = "<group>";
 		};
+		FE73566D207CC4AE0008D044 /* hole_ring */ = {
+			isa = PBXGroup;
+			children = (
+				FE73566E207CC4EB0008D044 /* holeRing.cpp */,
+				FE73566F207CC4EB0008D044 /* holeRing.hpp */,
+			);
+			path = hole_ring;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -502,6 +515,7 @@
 			files = (
 				FE4E51A6207428EF002009AE /* morphologicalTransformations.cpp in Sources */,
 				FE4E51442073E8CE002009AE /* main.cpp in Sources */,
+				FE735670207CC4EB0008D044 /* holeRing.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
