@@ -14,12 +14,11 @@
 
 class holeRing {
 public:
-    holeRing(cv::Mat& img, int radius);
+    holeRing(cv::Mat& img);
     holeRing() {}
     cv::Mat& extracktIMG();
-    void closingHolis();
+    void closingHolis(int radius);
 protected:
-    cv::Mat hole;
     cv::Mat image;
 };
 

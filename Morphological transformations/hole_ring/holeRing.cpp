@@ -14,13 +14,13 @@
 using namespace cv;
 
 cv::Mat &holeRing::extracktIMG() { 
+    return image;
+}
+
+void holeRing::closingHolis(int radius) { 
     <#code#>;
 }
 
-holeRing::holeRing(cv::Mat &img, int radius) { 
-    <#code#>;
-}
-
-void holeRing::closingHolis() { 
+holeRing::holeRing(cv::Mat &img) { 
     <#code#>;
 }
