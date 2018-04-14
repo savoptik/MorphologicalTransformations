@@ -14,12 +14,13 @@
 
 class holeRing {
 public:
-    holeRing(cv::Mat& img);
-    holeRing() {}
-    cv::Mat& extracktIMG();
-    void closingHolis(int radius);
+    holeRing(cv::Mat& img); // конструткор заполнит поле исходного изображения.
+    holeRing() {} // на всякий случай конструктор без параметров.
+    cv::Mat& extracktIMG(); // метод возвращает ссылку на исходный элемент.
+    void closingHolis(int radius); // метод закрывает дырки с заданным радиусом.
 protected:
-    cv::Mat image;
+    cv::Mat image; // исходное изображение.
+    cv::Mat resultImage; // результирующее изображение.
 };
 
 #endif /* holeRing_hpp */

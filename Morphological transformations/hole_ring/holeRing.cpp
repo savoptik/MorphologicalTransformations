@@ -14,13 +14,16 @@
 using namespace cv;
 
 cv::Mat &holeRing::extracktIMG() { 
-    return image;
+    return resultImage; //возврат результирующего изображения.
 }
 
 void holeRing::closingHolis(int radius) { 
-    <#code#>;
+    auto hole =  getStructuringElement(1, Size(radius, radius)); // получение структурирующего элемента.
+    Mat tMat; // временная матрица.
+    erode(image, tMat, hole); // Ирозия, чтобы отметить центры маленьких дырок.
+    dilate(tMat, resultImage, hole); // заполнение маленьких дырок.
 }
 
 holeRing::holeRing(cv::Mat &img) { 
-    <#code#>;
+    image = img; // заполнение поля изходного изображения.
 }
