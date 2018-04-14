@@ -18,6 +18,7 @@ public:
     holeRing() {} // на всякий случай конструктор без параметров.
     cv::Mat& extracktIMG(); // метод возвращает ссылку на исходный элемент.
     void closingHolis(int radius); // метод закрывает дырки с заданным радиусом.
+    void showCurrantImage(); // вывод результирующего изображения.
 protected:
     cv::Mat image; // исходное изображение.
     cv::Mat resultImage; // результирующее изображение.

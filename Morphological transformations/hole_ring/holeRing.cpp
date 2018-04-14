@@ -27,3 +27,11 @@ void holeRing::closingHolis(int radius) {
 holeRing::holeRing(cv::Mat &img) { 
     image = img; // заполнение поля изходного изображения.
 }
+
+void holeRing::showCurrantImage() {
+    std::string nameWindo = "Closed holes";
+    imshow(nameWindo, resultImage); // вывод изображения.
+    waitKey(); // ожидания нажатия клавиши.
+    destroyWindow(nameWindo); // уничтожение окон.
+}
+

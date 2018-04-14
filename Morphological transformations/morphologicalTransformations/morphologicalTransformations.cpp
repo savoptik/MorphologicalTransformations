@@ -13,12 +13,24 @@
 using namespace cv;
 
 void morphologicalTransformationsBase::showCurrentVersion() {
-    auto name = namedWindow(nameWindow); // создаём имя окна.
-    imshow(name, image); // выводим изображение.
+    imshow(nameWindow, image); // выводим изображение.
     waitKey(); // ждём нажатия клавиши.
-    destroyWindow(name); // уничтожаем окно.
+    destroyWindow(nameWindow); // уничтожаем окно.
 }
 
 morphologicalTransformationsBase::~morphologicalTransformationsBase() { 
     image.deallocate(); // освобождаем память.
+}
+
+morphologicalTransformationsBase::morphologicalTransformationsBase(std::string fileName) { 
+    image = imread(fileName); // загрузка изображения.
+    nameWindow = "First image";
+}
+
+cv::Mat &morphologicalTransformationsBase::extractImage() { 
+    return image; // вернуть ссылку на исходное изображение.
+}
+
+void morphologicalTransformationsBase::importImage(cv::Mat &img) { 
+    image = img; // засасываем изображение.
 }

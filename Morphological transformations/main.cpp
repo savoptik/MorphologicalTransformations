@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "morphologicalTransformations.hpp"
+#include "holeRing.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    morphologicalTransformationsBase image("/Users/artemsemenov/Documents/projects/xcode/Morphological transformations/Morphological transformations/media/Шестеренки.png"); // загрузка исходного сообщения.
+    image.showCurrentVersion(); // вывод исходного изображения для контроля.
+    holeRing closeHoloring(image.extractImage()); // создание объекта, который будет закрывать дырки.
+    closeHoloring.closingHolis(100); // закрытие дыок.
+    closeHoloring.showCurrantImage(); // вывод изображения.
+    return 0; // выход.
 }

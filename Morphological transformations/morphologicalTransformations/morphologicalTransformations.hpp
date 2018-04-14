@@ -15,9 +15,12 @@
 
 class morphologicalTransformationsBase {
 public:
+    morphologicalTransformationsBase(std::string fileName);
     morphologicalTransformationsBase() {} // просто на всякий случай пустой конструктор.
     ~morphologicalTransformationsBase(); // общий для всех диструктор.
     void showCurrentVersion(); // вывод текущего состояния изображения.
+    cv::Mat& extractImage(); // Вернуть ссылку на изображение.
+    void importImage(cv::Mat& img); // прямая загрузка матриц.
 protected:
     cv::Mat image; // изображение.
     std::string nameWindow; // имя окна для вывода.
