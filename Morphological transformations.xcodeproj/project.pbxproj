@@ -199,7 +199,6 @@
 		FE4E51732073EAB8002009AE /* libopencv_bgsegm.3.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_bgsegm.3.4.0.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/libopencv_bgsegm.3.4.0.dylib; sourceTree = "<group>"; };
 		FE4E51742073EAB8002009AE /* libopencv_structured_light.3.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_structured_light.3.4.0.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/libopencv_structured_light.3.4.0.dylib; sourceTree = "<group>"; };
 		FE4E51752073EAB8002009AE /* libopencv_surface_matching.3.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_surface_matching.3.4.0.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/libopencv_surface_matching.3.4.0.dylib; sourceTree = "<group>"; };
-		FE4E51A12074285C002009AE /* Шестеренки.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Шестеренки.png"; sourceTree = "<group>"; };
 		FE4E51A4207428EF002009AE /* morphologicalTransformations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = morphologicalTransformations.cpp; sourceTree = "<group>"; };
 		FE4E51A5207428EF002009AE /* morphologicalTransformations.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = morphologicalTransformations.hpp; sourceTree = "<group>"; };
 		FE4E522520742C01002009AE /* python3.6 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python3.6; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/python3.6; sourceTree = "<group>"; };
@@ -372,7 +371,6 @@
 				FE4E51432073E8CE002009AE /* main.cpp */,
 				FE73566D207CC4AE0008D044 /* hole_ring */,
 				FE4E51A3207428AE002009AE /* morphologicalTransformations */,
-				FE4E51A22074286B002009AE /* media */,
 			);
 			path = "Morphological transformations";
 			sourceTree = "<group>";
@@ -428,14 +426,6 @@
 				FE4E51522073EAB7002009AE /* libopencv_xphoto.3.4.0.dylib */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FE4E51A22074286B002009AE /* media */ = {
-			isa = PBXGroup;
-			children = (
-				FE4E51A12074285C002009AE /* Шестеренки.png */,
-			);
-			path = media;
 			sourceTree = "<group>";
 		};
 		FE4E51A3207428AE002009AE /* morphologicalTransformations */ = {
