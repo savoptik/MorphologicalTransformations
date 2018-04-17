@@ -206,6 +206,7 @@
 		FE4E522720742C01002009AE /* python2.7 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python2.7; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/python2.7; sourceTree = "<group>"; };
 		FE73566E207CC4EB0008D044 /* holeRing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = holeRing.cpp; sourceTree = "<group>"; };
 		FE73566F207CC4EB0008D044 /* holeRing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = holeRing.hpp; sourceTree = "<group>"; };
+		FEB0B19A208654C60060C6EE /* Шестеренки.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Шестеренки.png"; path = "media/Шестеренки.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +369,7 @@
 		FE4E51422073E8CE002009AE /* Morphological transformations */ = {
 			isa = PBXGroup;
 			children = (
+				FEB0B19A208654C60060C6EE /* Шестеренки.png */,
 				FE4E51432073E8CE002009AE /* main.cpp */,
 				FE73566D207CC4AE0008D044 /* hole_ring */,
 				FE4E51A3207428AE002009AE /* morphologicalTransformations */,
