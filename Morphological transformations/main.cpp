@@ -9,6 +9,7 @@
 #include <iostream>
 #include "morphologicalTransformations.hpp"
 #include "holeRing.hpp"
+using namespace std;
 
 int main(int argc, const char * argv[]) {
     morphologicalTransformationsBase image("./media/Шестеренки.png"); // загрузка исходного сообщения.
