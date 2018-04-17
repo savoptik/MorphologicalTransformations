@@ -19,3 +19,4 @@ int main(int argc, const char * argv[]) {
     closeHoloring.showCurrantImage(); // вывод изображения.
     return 0; // выход.
 }
+
