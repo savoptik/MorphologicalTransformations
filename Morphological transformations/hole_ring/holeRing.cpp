@@ -18,17 +18,17 @@ cv::Mat &holeRing::extracktIMG() {
 }
 
 void holeRing::closingHolis(int radius) { 
-    Mat hole(radius, radius, CV_8UC1);
-    circle(hole, {radius/2, radius/2}, radius/2, 255);
-    imshow("кольцо", hole); waitKey();
+    Mat hole(radius, radius, CV_8UC1); // матрица для будущего кольца.
+    circle(hole, {radius/2, radius/2}, radius/2, 255); // создание необходимого кольца.
+//    imshow("кольцо", hole); waitKey();
     Mat tMat; // временная матрица.
     erode(image, tMat, hole); // Ирозия, чтобы отметить центры маленьких дырок.
-    imshow("Результат эрозии", tMat); waitKey();
-    auto delationIlimen = getStructuringElement(2, Size(radius, radius));
-    imshow("Структурирующий элемент", delationIlimen); waitKey();
+//    imshow("Результат эрозии", tMat); waitKey();
+    auto delationIlimen = getStructuringElement(2, Size(radius, radius)); // структурирующий элемент для расширения.
+//    imshow("Структурирующий элемент", delationIlimen); waitKey();
     dilate(tMat, tMat, delationIlimen); // заполнение маленьких дырок.
-    imshow("Результат расширения", tMat); waitKey();
-    resultImage = image + tMat;
+//    imshow("Результат расширения", tMat); waitKey();
+    resultImage = image + tMat; // наложение результат на шестирёнки.
 }
 
 holeRing::holeRing(cv::Mat &img) { 
