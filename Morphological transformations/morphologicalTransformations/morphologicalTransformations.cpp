@@ -23,7 +23,7 @@ morphologicalTransformationsBase::~morphologicalTransformationsBase() {
 }
 
 morphologicalTransformationsBase::morphologicalTransformationsBase(std::string fileName) { 
-    image = imread(fileName, IMREAD_GRAYSCALE); // загрузка изображения.
+    image = imread(fileName, IMREAD_GRAYSCALE); // загрузка изображения в оттенках серого.
     nameWindow = "First image";
 }
 
