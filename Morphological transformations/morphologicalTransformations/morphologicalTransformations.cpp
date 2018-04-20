@@ -34,3 +34,9 @@ cv::Mat &morphologicalTransformationsBase::extractImage() {
 void morphologicalTransformationsBase::importImage(cv::Mat &img) { 
     image = img; // засасываем изображение.
 }
+
+void morphologicalTransformationsBase::exportToDisk(std::string filePath, cv::Mat &matrix) {
+    filePath = filePath + "result.jpg";
+    imwrite(filePath, matrix);
+}
+

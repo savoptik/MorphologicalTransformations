@@ -21,6 +21,7 @@ public:
     void showCurrentVersion(); // вывод текущего состояния изображения.
     cv::Mat& extractImage(); // Вернуть ссылку на изображение.
     void importImage(cv::Mat& img); // прямая загрузка матриц.
+    void exportToDisk(std::string filePath, cv::Mat &matrix);
 protected:
     cv::Mat image; // изображение.
     std::string nameWindow; // имя окна для вывода.

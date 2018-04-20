@@ -13,10 +13,11 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     morphologicalTransformationsBase image("./media/Шестеренки.png"); // загрузка исходного сообщения.
-    image.showCurrentVersion(); // вывод исходного изображения для контроля.
+    // umage.showCurrentVersion(); // вывод исходного изображения для контроля.
     holeRing closeHoloring(image.extractImage()); // создание объекта, который будет закрывать дырки.
     closeHoloring.closingHolis(97); // закрытие дыок.
     closeHoloring.showCurrantImage(); // вывод изображения.
+    image.exportToDisk("./media/", closeHoloring.extracktIMG());
     return 0; // выход.
 }
 
