@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE49A4AE208A3C2300B1FBEE /* CreatorКing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE49A4AC208A3C2300B1FBEE /* CreatorКing.cpp */; };
 		FE4E51442073E8CE002009AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4E51432073E8CE002009AE /* main.cpp */; };
 		FE4E51A6207428EF002009AE /* morphologicalTransformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4E51A4207428EF002009AE /* morphologicalTransformations.cpp */; };
 		FE4E51A720742C00002009AE /* libopencv_aruco.3.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E51622073EAB7002009AE /* libopencv_aruco.3.4.0.dylib */; };
@@ -154,6 +155,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FE49A4AC208A3C2300B1FBEE /* CreatorКing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "CreatorКing.cpp"; sourceTree = "<group>"; };
+		FE49A4AD208A3C2300B1FBEE /* CreatorКing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "CreatorКing.hpp"; sourceTree = "<group>"; };
 		FE4E51402073E8CE002009AE /* Morphological transformations */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Morphological transformations"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4E51432073E8CE002009AE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FE4E514B2073EAB7002009AE /* libopencv_line_descriptor.3.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_line_descriptor.3.4.0.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/libopencv_line_descriptor.3.4.0.dylib; sourceTree = "<group>"; };
@@ -349,6 +352,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE49A4AB208A3C0300B1FBEE /* CreatorКing */ = {
+			isa = PBXGroup;
+			children = (
+				FE49A4AC208A3C2300B1FBEE /* CreatorКing.cpp */,
+				FE49A4AD208A3C2300B1FBEE /* CreatorКing.hpp */,
+			);
+			path = "CreatorКing";
+			sourceTree = "<group>";
+		};
 		FE4E51372073E8CE002009AE = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +383,7 @@
 			children = (
 				FEB0B19A208654C60060C6EE /* Шестеренки.png */,
 				FE4E51432073E8CE002009AE /* main.cpp */,
+				FE49A4AB208A3C0300B1FBEE /* CreatorКing */,
 				FE73566D207CC4AE0008D044 /* hole_ring */,
 				FE4E51A3207428AE002009AE /* morphologicalTransformations */,
 			);
@@ -505,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE49A4AE208A3C2300B1FBEE /* CreatorКing.cpp in Sources */,
 				FE4E51A6207428EF002009AE /* morphologicalTransformations.cpp in Sources */,
 				FE4E51442073E8CE002009AE /* main.cpp in Sources */,
 				FE735670207CC4EB0008D044 /* holeRing.cpp in Sources */,
