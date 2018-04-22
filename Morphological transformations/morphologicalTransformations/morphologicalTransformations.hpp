@@ -20,7 +20,7 @@ public:
     ~morphologicalTransformationsBase(); // общий для всех диструктор.
     void showCurrentVersion(); // вывод текущего состояния изображения.
     cv::Mat& extractImage(); // Вернуть ссылку на изображение.
-    void importImage(cv::Mat& img); // прямая загрузка матриц.
+    void importImage(cv::Mat& matrix); // прямая загрузка матриц.
     void exportToDisk(std::string filePath, cv::Mat &matrix);
 protected:
     cv::Mat image; // изображение.
