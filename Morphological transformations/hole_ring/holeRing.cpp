@@ -39,14 +39,14 @@ holeRing::holeRing(cv::Mat &img) {
 }
 
 void holeRing::showCurrantImage() {
-    std::string nameWindo = "Closed holes";
+    std::string nameWindo = "Closed holes"; // имя окна.
     imshow(nameWindo, resultImage); // вывод изображения.
     waitKey(); // ожидания нажатия клавиши.
     destroyWindow(nameWindo); // уничтожение окон.
 }
 
 holeRing::~holeRing() { 
-    image.deallocate();
+    image.deallocate(); // освобождение памяти.
     resultImage.deallocate();
 }
 

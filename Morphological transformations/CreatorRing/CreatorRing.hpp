@@ -18,8 +18,8 @@ public:
     CreatorRing() {} // на всякий случай конструктор без параметров.
     ~CreatorRing(); // уничтожение всех ненужных объектов.
     void disconnection(int diameter); // размыкание принимает диаметр внутреннего диска.
-    void showResult();
-    cv::Mat& exportResult() {return result;}
+    void showResult(); // вывод результата
+    cv::Mat& exportResult() {return result;} // возврат ссылки на матрицу.
 private:
     cv::Mat image, result; // изображение.
 };

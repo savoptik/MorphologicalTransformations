@@ -17,21 +17,22 @@ using namespace std;
 const string filePath = "./media/";
 
 int main(int argc, const char * argv[]) {
-/*    morphologicalTransformationsBase image("./media/Шестеренки.png"); // загрузка исходного сообщения.
+/*    morphologicalTransformationsBase image("./media/Шестеренки.png"); // загрузка исходного изображения..
     // umage.showCurrentVersion(); // вывод исходного изображения для контроля.
     holeRing closeHoloring(image.extractImage()); // создание объекта, который будет закрывать дырки.
     closeHoloring.closingHolis(97); // закрытие дыок.
     closeHoloring.showCurrantImage(); // вывод изображения.
     image.exportToDisk("./media/", closeHoloring.extracktIMG()); */
     morphologicalTransformationsBase st2(filePath + "result1.jpg");
-    st2.showCurrentVersion();
-    CreatorRing cr(st2.extractImage());
-    cr.disconnection(280);
-    cr.showResult();
-//    st2.exportToDisk(filePath, cr.exportResult());
+    st2.showCurrentVersion(); // вывод изображения для контроля.
+    CreatorRing cr(st2.extractImage()); // создание объекта, который уберёт внутренний диск.
+    cr.disconnection(280); // удаление внутреннего диска.
+    cr.showResult(); // отображение результата.
+//    st2.exportToDisk(filePath, cr.exportResult()); // вывод на диск.
     allocationDefects ad(cr.exportResult());
     ad.labelWholeTeeth(10);
     ad.showResult();
+    ad.exportResultToDisk(filePath);
     return 0; // выход.
 }
 
