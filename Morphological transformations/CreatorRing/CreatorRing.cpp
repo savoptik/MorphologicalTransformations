@@ -14,31 +14,29 @@
 using namespace cv;
 
 CreatorRing::CreatorRing(cv::Mat &matrix) {
-    image = matrix; // затягивание изображения внутрь объекта.
+    image = matrix; // затягивание изображения.
 }
 
 void CreatorRing::disconnection(int diameter) {
-    Mat disk(diameter, diameter, CV_8UC1); // создание матрицы для кольца.
-    circle(disk, {diameter/2, diameter/2}, diameter/2, 255); // получение окружности.
-//    imshow("диск", disk); waitKey();
-    Mat tMat(image.rows, image.cols, CV_8UC1); // создание матрицы, для записи результатов эрозии.
-    erode(image, tMat, disk); // жрозия.
-//    imshow("результат эрозии", tMat); waitKey();
-    auto eliment = getStructuringElement(2, Size(diameter+7, diameter+7)); // получаем слегка увиличенный элемент для удаления центрального диска.
-    dilate(tMat, tMat, eliment); // получаем центральный диск.
-//    imshow("результат расширения", tMat); waitKey();
-    result = image - tMat; // получаем изображение, в котором удалён центральный диск.
+    Mat disk(diameter, diameter, CV_8UC1); // матрица для кольца.
+    circle(disk, {diameter/2, diameter/2}, diameter/2, 255); // создание кольца.
+    Mat tMat(image.rows, image.cols, CV_8UC1); // временная матрица.
+    erode(image, tMat, disk); // эрозия созданным кольцом.
+    auto eliment = getStructuringElement(2, Size(diameter+7, diameter+7)); // структурирующий элемент для расширения.
+    dilate(tMat, tMat, eliment); // расширение созданным выше структурирующим элементом.
+    result = image - tMat; // вырезание внутреннего диска из шестерёнок.
 }
 
-CreatorRing::~CreatorRing() {
-    image.deallocate(); // уничтожение матриц.
+CreatorRing::~CreatorRing() { // освобождение памяти.
+    image.deallocate();
     result.deallocate();
 }
 
 void CreatorRing::showResult() { 
     std::string name = "Результат размыкания"; // имя окна.
-    namedWindow(name); // создания имени окна.
-    imshow(name, result); // вывод изображения.
+    namedWindow(name); // создание окна.
+    imshow(name, result); // вывод изображения на экран.
     waitKey(); // ожидание нажатия клавиши.
-    destroyWindow(name);// уничтожение окна.
+    destroyWindow(name); // уничтожение окна.
 }
+

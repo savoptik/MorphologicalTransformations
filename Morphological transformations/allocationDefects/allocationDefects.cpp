@@ -14,32 +14,33 @@
 using namespace cv;
 
 allocationDefects::~allocationDefects() { 
-    imgMatrix.deallocate();
+    imgMatrix.deallocate(); // освобождение памяти.
+    resultMatrix.deallocate();
 }
 
 allocationDefects::allocationDefects(cv::Mat matrix) { 
-    imgMatrix = matrix;
+    imgMatrix = matrix; // затягивание матрицы.
 }
 
 cv::Mat &allocationDefects::exportResultMatrix() { 
-    return resultMatrix;
+    return resultMatrix; // возврат ссылки на матрицу.
 }
 
 void allocationDefects::exportResultToDisk(std::string filePath) { 
-    imwrite(filePath + "result4.jpg", resultMatrix);
+    imwrite(filePath + "result3.jpg", resultMatrix); // запись результирующего изображения на диск.
 }
 
 void allocationDefects::showResult() { 
-    std::string name = "выделение дефектов";
-    namedWindow(name);
-    imshow(name, resultMatrix);
-    waitKey();
-    destroyWindow(name);
+    std::string name = "выделение дефектов"; // имя окна.
+    namedWindow(name); // создание окна.
+    imshow(name, resultMatrix); // вывод изображения.
+    waitKey(); // ожидание нажатия клавиши.
+    destroyWindow(name); // уничтожение изображения.
 }
 
 void allocationDefects::labelWholeTeeth(int diametr) { 
-    Mat teethCirkul(diametr, diametr, CV_8UC1);
-    circle(teethCirkul, {diametr/2, diametr/2}, diametr/2, 255);
-    dilate(imgMatrix, resultMatrix, teethCirkul);
+    Mat teethCirkul(diametr, diametr, CV_8UC1); // пустая матрица для кольца.
+    circle(teethCirkul, {diametr/2, diametr/2}, diametr/2, 255); // создание кольца.
+    dilate(imgMatrix, resultMatrix, teethCirkul); // расширение элементом.
 }
 

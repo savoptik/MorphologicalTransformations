@@ -15,7 +15,7 @@
 
 class morphologicalTransformationsBase {
 public:
-    morphologicalTransformationsBase(std::string fileName);
+    morphologicalTransformationsBase(std::string fileName); // конструктор загрузит изображение по заданному адресу.
     morphologicalTransformationsBase() {} // просто на всякий случай пустой конструктор.
     ~morphologicalTransformationsBase(); // общий для всех диструктор.
     void showCurrentVersion(); // вывод текущего состояния изображения.
@@ -24,7 +24,6 @@ public:
     void exportToDisk(std::string filePath, cv::Mat &matrix);
 protected:
     cv::Mat image; // изображение.
-    std::string nameWindow; // имя окна для вывода.
 };
 
 #endif /* morphologicalTransformations_hpp */

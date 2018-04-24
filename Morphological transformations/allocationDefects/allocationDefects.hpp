@@ -14,15 +14,15 @@
 
 class allocationDefects {
 public:
-    allocationDefects(cv::Mat matrix);
-    allocationDefects() {}
-    ~allocationDefects();
-    void showResult();
-    void exportResultToDisk(std::string filePath);
-    cv::Mat& exportResultMatrix();
-    void labelWholeTeeth(int diametr);
+    allocationDefects(cv::Mat matrix); // конструктор.
+    allocationDefects() {} // конструктор без параметров.
+    ~allocationDefects(); // диструктор, который освободит память.
+    void showResult(); // вывод результата.
+    void exportResultToDisk(std::string filePath); // вывод изображения на диск.
+    cv::Mat& exportResultMatrix(); // возврат ссылки на результирующую матрицу.
+    void labelWholeTeeth(int diametr); // маркирование кружочками целых зубцов.
 private:
-    cv::Mat imgMatrix, resultMatrix;
+    cv::Mat imgMatrix, resultMatrix; // исходное и результирующее изображение.
 };
 
 #endif /* allocationDefects_hpp */

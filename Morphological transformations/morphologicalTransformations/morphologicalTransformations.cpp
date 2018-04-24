@@ -13,6 +13,7 @@
 using namespace cv;
 
 void morphologicalTransformationsBase::showCurrentVersion() {
+    std::string nameWindow = "Изображение"; // имя окна.
     imshow(nameWindow, image); // выводим изображение.
     waitKey(); // ждём нажатия клавиши.
     destroyWindow(nameWindow); // уничтожаем окно.
@@ -24,7 +25,6 @@ morphologicalTransformationsBase::~morphologicalTransformationsBase() {
 
 morphologicalTransformationsBase::morphologicalTransformationsBase(std::string fileName) { 
     image = imread(fileName, IMREAD_GRAYSCALE); // загрузка изображения в оттенках серого.
-    nameWindow = "First image";
 }
 
 cv::Mat &morphologicalTransformationsBase::extractImage() { 
@@ -36,7 +36,7 @@ void morphologicalTransformationsBase::importImage(cv::Mat& matrix) {
 }
 
 void morphologicalTransformationsBase::exportToDisk(std::string filePath, cv::Mat &matrix) {
-    filePath = filePath + "result.jpg";
-    imwrite(filePath, matrix);
+    filePath = filePath + "result.jpg"; // формирование имени изображения.
+    imwrite(filePath, matrix); // вывод изображения на диск.
 }
 
