@@ -11,6 +11,7 @@
 #include "morphologicalTransformations.hpp"
 #include "holeRing.hpp"
 #include "CreatorRing.hpp"
+#include "allocationDefects.hpp"
 using namespace std;
 
 const string filePath = "./media/";
@@ -28,6 +29,9 @@ int main(int argc, const char * argv[]) {
     cr.disconnection(280);
     cr.showResult();
 //    st2.exportToDisk(filePath, cr.exportResult());
+    allocationDefects ad(cr.exportResult());
+    ad.labelWholeTeeth(10);
+    ad.showResult();
     return 0; // выход.
 }
 

@@ -21,7 +21,7 @@ public:
     void showResult();
     cv::Mat& exportResult() {return result;}
 private:
-    cv::Mat image, result, ; // изображение.
+    cv::Mat image, result; // изображение.
 };
 
 #endif /* CreatorRing_hpp */

@@ -21,7 +21,7 @@ public:
     void exportResultToDisk(std::string filePath);
     cv::Mat& exportResultMatrix();
     void labelWholeTeeth(int diametr);
-    private;
+private:
     cv::Mat imgMatrix, resultMatrix;
 };
 

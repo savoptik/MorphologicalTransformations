@@ -24,7 +24,7 @@ void CreatorRing::disconnection(int diameter) {
     Mat tMat(image.rows, image.cols, CV_8UC1);
     erode(image, tMat, disk);
 //    imshow("результат эрозии", tMat); waitKey();
-    auto eliment = getStructuringElement(2, Size(diameter, diameter));
+    auto eliment = getStructuringElement(2, Size(diameter+7, diameter+7));
     dilate(tMat, tMat, eliment);
 //    imshow("результат расширения", tMat); waitKey();
     result = image - tMat;
