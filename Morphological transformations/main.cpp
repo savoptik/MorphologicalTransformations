@@ -28,11 +28,9 @@ int main(int argc, const char * argv[]) {
     CreatorRing cr(st2.extractImage()); // создание объекта, который уберёт внутренний диск.
     cr.disconnection(280); // удаление внутреннего диска.
     cr.showResult(); // отображение результата.
-//    st2.exportToDisk(filePath, cr.exportResult()); // вывод на диск.
     allocationDefects ad(cr.exportResult());
     ad.labelWholeTeeth(10);
     ad.showResult();
-    ad.exportResultToDisk(filePath);
     return 0; // выход.
 }
 
