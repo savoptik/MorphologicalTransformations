@@ -20,8 +20,9 @@ public:
     void disconnection(int diameter); // размыкание принимает диаметр внутреннего диска.
     void showResult(); // вывод результата на экран.
     cv::Mat& exportResult() {return result;} // возврат ссылки на результирующую матрицу.
+    cv::Mat& extractInternalCircul();
 private:
-    cv::Mat image, result; // исходное и результирующее изображение.
+    cv::Mat image, result, externalCircul; // исходное и результирующее изображение.
 };
 
 #endif /* CreatorRing_hpp */

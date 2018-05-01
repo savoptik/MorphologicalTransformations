@@ -19,7 +19,7 @@ allocationDefects::~allocationDefects() {
 }
 
 allocationDefects::allocationDefects(cv::Mat matrix) { 
-    imgMatrix = matrix; // затягивание матрицы.
+    matrix.copyTo(imgMatrix); // затягивание матрицы.
 }
 
 cv::Mat &allocationDefects::exportResultMatrix() { 

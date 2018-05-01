@@ -16,6 +16,7 @@
 		FE4E51C520742C00002009AE /* libopencv_imgcodecs.3.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E51642073EAB8002009AE /* libopencv_imgcodecs.3.4.0.dylib */; };
 		FE4E51C720742C00002009AE /* libopencv_imgproc.3.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E514F2073EAB7002009AE /* libopencv_imgproc.3.4.0.dylib */; };
 		FE735670207CC4EB0008D044 /* holeRing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE73566E207CC4EB0008D044 /* holeRing.cpp */; };
+		FE86CFF62098C72C0050A569 /* markingDefects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE86CFF52098C72C0050A569 /* markingDefects.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,6 +88,8 @@
 		FE4E522720742C01002009AE /* python2.7 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python2.7; path = ../../../../../../usr/local/Cellar/opencv/3.4.0_1/lib/python2.7; sourceTree = "<group>"; };
 		FE73566E207CC4EB0008D044 /* holeRing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = holeRing.cpp; sourceTree = "<group>"; };
 		FE73566F207CC4EB0008D044 /* holeRing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = holeRing.hpp; sourceTree = "<group>"; };
+		FE86CFF42098C72C0050A569 /* markingDefects.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = markingDefects.hpp; path = "Morphological transformations/markingDefects/markingDefects.hpp"; sourceTree = SOURCE_ROOT; };
+		FE86CFF52098C72C0050A569 /* markingDefects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = markingDefects.cpp; path = "Morphological transformations/markingDefects/markingDefects.cpp"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				FE4E51432073E8CE002009AE /* main.cpp */,
+				FE86CFF32098C6EF0050A569 /* markingDefects */,
 				FE41279E208F345400C78188 /* allocationDefects */,
 				FE35EDF3208CB85800310681 /* CreatorRing */,
 				FE73566D207CC4AE0008D044 /* hole_ring */,
@@ -222,6 +226,16 @@
 			path = hole_ring;
 			sourceTree = "<group>";
 		};
+		FE86CFF32098C6EF0050A569 /* markingDefects */ = {
+			isa = PBXGroup;
+			children = (
+				FE86CFF52098C72C0050A569 /* markingDefects.cpp */,
+				FE86CFF42098C72C0050A569 /* markingDefects.hpp */,
+			);
+			name = markingDefects;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE86CFF62098C72C0050A569 /* markingDefects.cpp in Sources */,
 				FE4127A1208F349D00C78188 /* allocationDefects.cpp in Sources */,
 				FE35EDF6208CB87900310681 /* CreatorRing.cpp in Sources */,
 				FE4E51A6207428EF002009AE /* morphologicalTransformations.cpp in Sources */,

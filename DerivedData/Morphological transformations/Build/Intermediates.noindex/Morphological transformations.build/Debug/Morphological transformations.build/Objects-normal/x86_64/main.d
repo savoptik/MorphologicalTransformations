@@ -125,4 +125,5 @@ dependencies: \
   /usr/local/include/opencv2/videostab/ring_buffer.hpp \
   /Users/artemsemenov/Documents/projects/xcode/Morphological\ transformations/Morphological\ transformations/hole_ring/holeRing.hpp \
   /Users/artemsemenov/Documents/projects/xcode/Morphological\ transformations/Morphological\ transformations/CreatorRing/CreatorRing.hpp \
-  /Users/artemsemenov/Documents/projects/xcode/Morphological\ transformations/Morphological\ transformations/allocationDefects/allocationDefects.hpp
+  /Users/artemsemenov/Documents/projects/xcode/Morphological\ transformations/Morphological\ transformations/allocationDefects/allocationDefects.hpp \
+  /Users/artemsemenov/Documents/projects/xcode/Morphological\ transformations/Morphological\ transformations/markingDefects/markingDefects.hpp

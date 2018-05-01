@@ -32,7 +32,7 @@ cv::Mat &morphologicalTransformationsBase::extractImage() {
 }
 
 void morphologicalTransformationsBase::importImage(cv::Mat& matrix) {
-    image = matrix; // засасываем изображение.
+    matrix.copyTo(image); // засасываем изображение.
 }
 
 void morphologicalTransformationsBase::exportToDisk(std::string filePath, cv::Mat &matrix) {
