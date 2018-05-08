@@ -31,6 +31,6 @@ void markingDefects::showResultImage() {
 
 void markingDefects::markingDifectTeeth(cv::Mat externalCircul, cv::Mat circulTeeth) { 
     teethDisk = externalCircul - circulTeeth; // вычитаем из внешнего диска диск здоровых зубцов.
-    resultMatrix = imgMatrix + teethDisk; // накладываем получившиеся метки на исходное изображение.
+    resultMatrix = teethDisk; // накладываем получившиеся метки на исходное изображение.
 }
 
